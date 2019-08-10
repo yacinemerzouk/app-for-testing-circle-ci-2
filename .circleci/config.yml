@@ -20,7 +20,7 @@ jobs:
           command: "meteor npm install --save bcrypt"
       - run:
           name: Lint
-          command: "meteor npm run lint"
+          command: "meteor npm run lint --silent"
       - run:
           name: Install PhantomJS
           command: "meteor npm i --save-dev phantomjs-prebuilt"
