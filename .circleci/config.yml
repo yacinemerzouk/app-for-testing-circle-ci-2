@@ -20,7 +20,7 @@ jobs:
           command: "meteor npm install --save bcrypt"
       - run:
           name: Lint
-          command: "meteor npm run lint --silent"
+          command: "meteor npm run lint"
       - run:
           name: Install PhantomJS
           command: "meteor npm i --save-dev phantomjs-prebuilt"
@@ -28,6 +28,11 @@ jobs:
           name: Run unit tests
           command: "TEST_BROWSER_DRIVER=phantomjs meteor test --once --driver-package meteortesting:mocha"
           shell: /bin/sh
+      - run:
+          name: Deploy to Galaxy
+          command: "meteor deploy app-for-testing-meteor-circle-ci-2.meteorapp.com --settings settings-prod-www.json"
+          no_output_timeout: "20m"
+
 workflows:
   version: 2
   Run tests for basic Meteor app:
