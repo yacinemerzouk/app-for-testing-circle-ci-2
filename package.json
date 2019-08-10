@@ -7,6 +7,14 @@
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
+  "eslintConfig": {
+    "extends": "@meteorjs/eslint-config-meteor",
+    "env": {
+      "meteor": true,
+      "node": true,
+      "mocha": true
+    }
+  },
   "dependencies": {
     "@babel/runtime": "^7.3.4",
     "meteor-node-stubs": "^0.4.1"
@@ -19,6 +27,15 @@
     "testModule": "tests/main.js"
   },
   "devDependencies": {
+    "@meteorjs/eslint-config-meteor": "^1.0.5",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-import-resolver-meteor": "^0.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-meteor": "^6.0.0",
+    "eslint-plugin-react": "^7.14.3",
     "phantomjs-prebuilt": "^2.1.16"
   }
 }
