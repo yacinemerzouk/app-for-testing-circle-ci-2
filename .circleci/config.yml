@@ -30,7 +30,7 @@ jobs:
           shell: /bin/sh
       - run:
           name: Deploy to Galaxy
-          command: "meteor deploy app-for-testing-meteor-circle-ci-2.meteorapp.com --settings settings-prod-www.json"
+          command: "meteor deploy app-for-testing-meteor-circle-ci-2.meteorapp.com --settings settings.json"
           no_output_timeout: "20m"
 
 workflows:
